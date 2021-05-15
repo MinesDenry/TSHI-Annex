@@ -1,0 +1,280 @@
+body{
+    margin:0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(253, 253, 253);
+}
+*{
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+
+a{text-decoration: none;
+    color:inherit;
+    }
+.logo img{
+    height: 70px;
+    border-radius: 50%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 30px;
+    background-color:rgb(255, 228, 228);
+    box-shadow: 2px 2px 20px rgba(255, 151, 103, 0.164);
+    z-index: 1;
+    width:100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+nav ul{
+    display: flex;
+    margin:0px;
+    padding: 0px;
+}
+nav ul li a{
+    height:40px;
+    line-height: 43px;
+    margin: 8px;
+    padding: 0px 10px;
+    display: flex;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: arial;
+    color:maroon;
+    letter-spacing: 1px;
+    transition: 0.4s ease-in-out;
+}
+
+ul{
+    list-style: none;
+}
+.active{
+    background-color: #b3b000;
+    color: #fff;
+}
+nav ul li a:hover{
+    border-radius: 5px;
+    background-color: maroon;
+    color:#fff;
+    box-shadow: 5px 10px 30px rgba(219, 74, 6, 0.5);
+    transition: all ease 0.2s;
+}
+
+.top {
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+}
+.background_tshi {
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    height: fit-content;
+}
+.schoolname {
+    color: maroon;
+    font-family:fantasy ;
+    float:center;
+    font-size: 30px;
+    margin-top: 150px;
+    text-align: center;
+    position: relative;
+  }
+
+  nav .menu-btn{
+    display: none;
+}
+
+.footer{
+    
+    height: 200px;
+    width: 100%;
+    margin-bottom: -40px;
+  }
+
+  .footer1{ width:33.33%;
+  height: 160px;
+  background-color: #90021F;
+  float:left;
+  text-align: right;
+  color: white;
+  border-right: solid black;
+  padding: 20px;
+  content: inherit;
+  margin-bottom: -10px;
+  }
+
+.footer2{ color: white; 
+    width:33.33%;
+  height: 160px;
+ background-color:  #90021F;
+ float:left;
+ text-align: center;
+ padding:20px;
+ border-right: solid black;
+}
+
+.footer3{
+ width:33.33%;
+ height: 160px;
+ background-color:  #90021F;
+ float:left;
+ padding:3%;
+ padding-top:20px;
+ text-align: center;
+ border-color: black;
+ color: white;
+}
+
+.footer4{
+  color: #90021F;
+  height: 50px;
+  float: left;
+  background-color: white;
+  border-top:solid black;
+  border-width: 2px;
+  text-align: center;
+  width: 100%;
+  font-family:fantasy;
+
+}
+
+@media(max-width:820px){
+    nav{
+        justify-content: space-between;
+        height: 65px;
+    }
+    .menu{
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0px;
+        background-color: #fff;
+        border-bottom: 4px solid #ff0000;
+        width:100%;
+    }
+    .menu li{
+        width:100%;
+    }
+    nav .menu li a{
+        width:100%;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        margin:0px;
+        padding: 25px;
+        border:1px solid rgba(38,38,38,0.03);
+    }
+    nav .menu-icon{
+        cursor: pointer;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+    nav .menu-icon .nav-icon{
+        background-color: #333333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background 0.2s ease-out;
+        width:18px;
+    }
+    nav .menu-icon .nav-icon:before,
+    nav .menu-icon .nav-icon:after{
+        background: #333333;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all ease-out 0.2s;
+        width:100%;
+    }
+    nav .menu-icon .nav-icon:before{
+        top: 5px;
+    }
+    nav .menu-icon .nav-icon:after{
+        top:-5px;
+    }
+    nav .menu-btn:checked ~ .menu-icon .nav-icon{
+        background: transparent;
+    }
+    nav .menu-btn:checked ~ .menu-icon .nav-icon:before{
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    nav .menu-btn:checked ~ .menu-icon .nav-icon:after{
+        transform: rotate(45deg);
+        top: 0;
+    }
+    nav .menu-btn{
+        display: none;
+    }
+    nav .menu-btn:checked ~ .menu{
+        display: block;
+    }
+    .home-img{
+        display: none;
+    }
+}
+
+@media(max-width:720px){
+    .schoolname{
+        font-size: 15px;
+    }
+    .footer1{
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-size: smaller;
+        width:100%;
+        border: solid black;
+        padding-top: 50px;
+        
+    }
+    .footer2{
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-size: smaller;
+        width:100%;
+        border: solid black;
+        border-top: none;
+        padding-top: 50px;
+    }
+    .footer3{
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-size: smaller;
+        width:100%;
+        border: solid black;
+        border-top: none;
+        padding-top: 50px;
+        
+        
+    }
+    .footer4{
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-size: smaller;
+        width:100%;
+        border: solid black;
+        border-top: none;
+    }
+
+    .footer{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}
